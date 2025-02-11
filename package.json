@@ -4,11 +4,16 @@
   "description": "A Discord bot to fetch and post anime news",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm install --no-audit"
   },
   "dependencies": {
-    "discord.js": "^14.0.0",
-    "axios": "^1.2.0"
+    "discord.js": "^14.18.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "author": "Your Name",
   "license": "MIT"
