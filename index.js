@@ -1,3 +1,4 @@
+require('dotenv').config();  // تحميل المتغيرات من ملف .env
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const axios = require('axios');
 
@@ -5,7 +6,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 
-const TOKEN = 'MTMzODgxMjM4OTkzOTg3MTgyNA.GTm-L_.AxOOHBxgxFYtGTcDIeh622opRfbPCYSNUoRFWc';  // ضع التوكن هنا
+const TOKEN = process.env.DISCORD_TOKEN;  // قراءة التوكن من متغير البيئة
 const JIKAN_API_URL = 'https://api.jikan.moe/v4/news';
 
 client.once('ready', () => {
